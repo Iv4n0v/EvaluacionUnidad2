@@ -36,9 +36,13 @@ namespace Ejercicicio03
                 return;
             }
 
-            MessageBox.Show("INGRESO");//quitar luegoooo
+            UsuariosVista usuariosVista = new UsuariosVista();
+            usuariosVista.Show();
         }
 
-   
+        private void CancelarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

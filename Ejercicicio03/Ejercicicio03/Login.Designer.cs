@@ -56,6 +56,7 @@
             this.CancelarButton.TabIndex = 1;
             this.CancelarButton.Text = "Cancelar";
             this.CancelarButton.UseVisualStyleBackColor = true;
+            this.CancelarButton.Click += new System.EventHandler(this.CancelarButton_Click);
             // 
             // label1
             // 
@@ -90,13 +91,16 @@
             this.ClaveTextBox.Location = new System.Drawing.Point(120, 85);
             this.ClaveTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ClaveTextBox.Name = "ClaveTextBox";
+            this.ClaveTextBox.PasswordChar = '*';
             this.ClaveTextBox.Size = new System.Drawing.Size(195, 22);
             this.ClaveTextBox.TabIndex = 5;
             // 
             // Login
             // 
+            this.AcceptButton = this.AceptarButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.CancelarButton;
             this.ClientSize = new System.Drawing.Size(376, 194);
             this.Controls.Add(this.ClaveTextBox);
             this.Controls.Add(this.UsuarioTextBox);

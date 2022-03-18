@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,28 @@ namespace Datos.Accesos
 
             }
             return user;
+        }
+        
+        public DataTable ListarUsuarios()
+        {
+            DataTable listaUsuarioDT = new DataTable();
+            try
+            {
+                string sql = "SELECT * FROM usuario;";
+                conn = new MySqlConnection(cadena);
+                conn.Open();
+
+                cmd = new MySqlCommand(sql, conn);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                listaUsuarioDT.Load(reader);
+            }
+            catch (Exception ex)
+            {
+
+                
+            }
+            return listaUsuarioDT;
         }
     }
 }
